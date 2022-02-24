@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Creepy Halloween Potion</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			background: #3a3846;
+		}
+		.container{
+			width: 600px;
+			height: 600px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+		}
+		.top{
+			width: 154px;
+			height: 40px;
+			background: #d0e2f0;
+			border-radius: 50%;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 90px;
+			margin: auto;
+		}
+		.top:before{
+			content: '';
+			width: 114px;
+			height: 22px;
+			background: #9fc3e3;
+			border-radius: 50%;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 6px;
+			margin: auto;
+		}
+		.neck{
+			width: 116px;
+			height: 134px;
+			background: #a9c8e4;
+			border: 20px solid #c1d7ee;
+			border-top: 0;
+			border-bottom: 0;
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: auto;
+			top: 122px;
+			z-index: -1;
+		}
+		.bottom{
+			width: 300px;
+			height: 300px;
+			border: 20px solid #c1d7ee;
+			border-radius: 50%;
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 70px;
+			margin: auto;
+			z-index: -2;
+		}
+		.empty{
+			width: 254px;
+			height: 80px;
+			background: #a9c8e4;
+			border-radius: 50% 50% 50% 50% / 100% 100% 0 0;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 246px;
+			margin: auto;
+			z-index: -3;
+		}
+		.liquid{
+			width: 264px;
+			height: 264px;
+			background: #99cb72;
+			border-radius: 50%;
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 88px;
+			margin: auto;
+			z-index: -4;
+		}
+		.surface{
+			width: 238px;
+			height: 36px;
+			background: #89b965;
+			border-radius: 50%;
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 254px;
+			margin: auto;
+		}
+		.bubble{
+			width: 40px;
+			height: 40px;
+			background: #c4e8aa;
+			border-radius: 50%;
+			position: absolute;
+		}
+		.bubble:before{
+			content: '';
+			width: 40px;
+			height: 40px;
+			box-shadow: 0 4px 0 0 #b3de94;
+			border-radius: 50%;
+			position: absolute;
+			bottom: 4px;
+		}
+		.b1{
+			left: 35px;
+			top: 104px;
+		}
+		.b2{
+			right: 20px;
+			top: 94px;
+			transform: scale(.4);
+		}
+		.b3{
+			right: 32px;
+			top: 124px;
+			transform: scale(.6);
+		}
+		.b4{
+			left: 44px;
+			bottom: 34px;
+			transform: scale(.4);
+		}
+		.eye-container{
+			width: 116px;
+			height: 116px;
+			background: #b3de94;
+			border-radius: 50%;
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 30px;
+			margin: auto;
+		}
+		.eye{
+			width: 106px;
+			height: 106px;
+			background: #c4e8aa;
+			border-radius: 50%;
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+		.eye:before{
+			content: '';
+			width: 66px;
+			height: 66px;
+			background: #df9362;
+			border-radius: 50%;
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 14px;
+			margin: auto;
+		}
+		.eye:after{
+			content: '';
+			width: 36px;
+			height: 36px;
+			background: #3a3846;
+			border-radius: 50%;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 42px;
+			margin: auto;
+			animation: look-around 4s linear infinite;
+		}
+		@keyframes look-around{
+			8%{
+				transform: scale(.5);
+			}
+			10%{
+				transform: scale(.5);
+			}
+			15%{
+				transform: translateX(-10px) scale(.5);
+			}
+			24%{
+				transform: translateX(-10px) scale(.5);
+			}
+			28%{
+				transform: translateX(10px) scale(.5);
+			}
+			38%{
+				transform: translateX(10px) scale(.5);
+			}
+			42%{
+				transform: translateX(0px) scale(.5);
+			}
+			52%{
+				transform: translateX(0px) scale(.5);
+			}
+			60%{
+				transform: scale(1);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="top"></div>
+		<div class="neck"></div>
+		<div class="bottom">
+			<div class="bubble b1"></div>
+			<div class="bubble b2"></div>
+			<div class="bubble b3"></div>
+			<div class="bubble b4"></div>
+			<div class="eye-container">
+				<div class="eye"></div>
+			</div>
+		</div>
+		<div class="empty"></div>
+		<div class="liquid"></div>
+		<div class="surface"></div>
+	</div>
+</body>
+</html>
